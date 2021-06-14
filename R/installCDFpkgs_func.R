@@ -1,17 +1,17 @@
 # created date: 06/14/21
 # KS
 
-download_entrezg <- function(path_to_BAMwithGPL, version, organisms){
+download_entrezg <- function(path_to_BAMfolder, version, organisms){
   
   #' This function does one-time download ENTREZG from BrainArray 
   #' http://brainarray.mbni.med.umich.edu/Brainarray/Database/CustomCDF/CDF_download.asp
-  #' @param path_to_BAMwithGPL path to BrainArrayMapping_withGPL_version.csv
+  #' @param path_to_BAMfolder path to the folder containing BrainArrayMapping_withGPL_version.csv
   #' @param version string indicating version of ENTREZG e.g. "25" (the latest version)
   #' @param organisms list containing organism names e.g. list("Mus musculus", "Homo sapiens")
   #' @author Stephanie Hickey, Kewalin Samart
   
   # read in BAMwithGPL file
-  BrainArray_with_GPL_df = read.csv(path_to_BAMwithGPL)
+  BrainArray_with_GPL_df = read.csv(paste0(path_to_BAMfolder,"/","BrainArrayMapping_withGPL_",version,".csv"))
   
   # start timing the function
   tic <- as.integer(as.POSIXct( Sys.time() )) 
