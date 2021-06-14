@@ -1,5 +1,5 @@
 # created date: 06/14/21
-# KS
+# Kewalin Samart
 
 download_entrezg <- function(path_to_BAMfolder, version, organisms){
   
@@ -38,3 +38,16 @@ download_entrezg <- function(path_to_BAMfolder, version, organisms){
   toc <- as.integer(as.POSIXct( Sys.time() )) # store finished time
   print(paste('The time it took in minutes to run the function was',(toc-tic)/60,sep=" "))
 }
+
+#################
+## Example Run ##
+#################
+# ## install all CDF packages version "25" for "Mus musculus" and "Homo sapiens" organisms
+# library(here)
+# starting directory: CDFpackages_installation (this GitHub repo)
+# ## set up variables
+# path_to_BAMfolder <- here("data/mapping_genes")
+# version <- "25"
+# organisms <- list("Mus musculus", "Homo sapiens")
+# ## run the function to install packages
+# download_entrezg(path_to_BAMfolder, version, organisms)
