@@ -8,7 +8,7 @@ This is the script used to install CDF packages from BrainArray (http://brainarr
 - *args[2]* is string indicating version of ENTREZG e.g. `"25"` (the latest version)
 - *args[3]* is a list of organism name(s)we want the packages for e.g. `list("Mus musculus","Homo sapiens")`
 
-Example: downloading and installing CDF packages version 25 for humans and mouses data
+**Example**: downloading and installing CDF packages version 25 for human and mouse data
 
 ```r
 Rscript installCDFpkgs_run.R path/to/mapping_genes "25" list("Mus musculus","Homo sapiens")
